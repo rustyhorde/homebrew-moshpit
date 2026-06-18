@@ -7,7 +7,7 @@ class Moshpits < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.0/mps-aarch64-apple-darwin.tar.gz"
-      sha256 "0669c74f26fe7291e4e11332c91010813664fa685ee918014ddb20ecc0e0eb48"
+      sha256 "8bf47f5dc797e74c85117f9990886e9058bad03f69855fdc9f3a0a2ce07a366b"
     end
   end
 

@@ -7,7 +7,7 @@ class MoshpitKeygenUnstable < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.0/mp-keygen-unstable-aarch64-apple-darwin.tar.gz"
-      sha256 "36908363825475330fed3ad8618afde4343cdadc73db98263c9b87f49fd7c642"
+      sha256 "f466a6de5865fa25bfbed3b1425095468054fd611927e4641d304b05b85d9667"
     end
   end
 

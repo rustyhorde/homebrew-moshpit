@@ -7,7 +7,7 @@ class MoshpitKeygen < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.0/mp-keygen-aarch64-apple-darwin.tar.gz"
-      sha256 "4765aa47a74acf07e364b25d0e4c355bdba80ef674a4441fdd0377c934300186"
+      sha256 "1dd50f1033fc13d767264f6d9a280d8adff1f37e97feb4ccc566025965ada5be"
     end
   end
 

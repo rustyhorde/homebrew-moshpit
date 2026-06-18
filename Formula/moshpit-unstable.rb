@@ -7,7 +7,7 @@ class MoshpitUnstable < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.0/mp-unstable-aarch64-apple-darwin.tar.gz"
-      sha256 "e9a2c7508a49c42f099f7b277d3c83cb5f2ea8245e524674c67f679efd4a9fc4"
+      sha256 "70c8a061ed9458900e2585db764f2b93f81102b4d769768d51c7a5f16ae9b3c4"
     end
   end
 
