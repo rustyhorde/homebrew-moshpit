@@ -2,24 +2,24 @@ class MoshpitUnstable < Formula
   desc "Moshpit client (post-quantum/unstable build) — encrypted remote terminal"
   homepage "https://github.com/rustyhorde/moshpit"
   license any_of: ["MIT", "Apache-2.0"]
-  version "0.9.0"
+  version "0.9.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.0/mp-unstable-aarch64-apple-darwin.tar.gz"
-      sha256 "70c8a061ed9458900e2585db764f2b93f81102b4d769768d51c7a5f16ae9b3c4"
+      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.1/mp-unstable-aarch64-apple-darwin.tar.gz"
+      sha256 "de59fef6fc1307f32324cfa4a1df493fa5081a0f47f7cb510d9ad9104412fa8b"
     end
   end
 
   conflicts_with "moshpit", because: "both install the mp binary"
 
   def install
-    bin.install "mp/mp"
-    bash_completion.install "mp/mp.bash" => "mp"
-    zsh_completion.install "mp/_mp"
-    fish_completion.install "mp/mp.fish"
-    man1.install "mp/mp.1"
-    (etc/"moshpit").install "mp/moshpit.toml.example" if File.exist?("mp/moshpit.toml.example")
+    bin.install "mp"
+    bash_completion.install "mp.bash" => "mp"
+    zsh_completion.install "_mp"
+    fish_completion.install "mp.fish"
+    man1.install "mp.1"
+    (etc/"moshpit").install "moshpit.toml.example" if File.exist?("moshpit.toml.example")
   end
 
   def caveats

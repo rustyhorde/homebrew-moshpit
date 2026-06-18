@@ -2,22 +2,22 @@ class Moshpits < Formula
   desc "Moshpit server — mosh-like encrypted remote terminal host"
   homepage "https://github.com/rustyhorde/moshpit"
   license any_of: ["MIT", "Apache-2.0"]
-  version "0.9.0"
+  version "0.9.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.0/mps-aarch64-apple-darwin.tar.gz"
-      sha256 "8bf47f5dc797e74c85117f9990886e9058bad03f69855fdc9f3a0a2ce07a366b"
+      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.1/mps-aarch64-apple-darwin.tar.gz"
+      sha256 "d617d220d89968d542bdabeb053b905e614c999b684967653d51e3c6a2a09d26"
     end
   end
 
   def install
-    bin.install "mps/mps"
-    bash_completion.install "mps/mps.bash" => "mps"
-    zsh_completion.install "mps/_mps"
-    fish_completion.install "mps/mps.fish"
-    man1.install "mps/mps.1"
-    (etc/"moshpits").install "mps/moshpits.toml.example" if File.exist?("mps/moshpits.toml.example")
+    bin.install "mps"
+    bash_completion.install "mps.bash" => "mps"
+    zsh_completion.install "_mps"
+    fish_completion.install "mps.fish"
+    man1.install "mps.1"
+    (etc/"moshpits").install "moshpits.toml.example" if File.exist?("moshpits.toml.example")
   end
 
   def caveats

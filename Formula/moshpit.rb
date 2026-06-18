@@ -2,22 +2,22 @@ class Moshpit < Formula
   desc "Moshpit client — mosh-like encrypted remote terminal"
   homepage "https://github.com/rustyhorde/moshpit"
   license any_of: ["MIT", "Apache-2.0"]
-  version "0.9.0"
+  version "0.9.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.0/mp-aarch64-apple-darwin.tar.gz"
-      sha256 "901e2e847146a3d1a857daf1638921c2fdf5ec08ffc8640404aa16c0c6f51a2e"
+      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.1/mp-aarch64-apple-darwin.tar.gz"
+      sha256 "fe7ebaba347d251db689e67dde83fd812addeefb9c9bf809857d35af372aee3e"
     end
   end
 
   def install
-    bin.install "mp/mp"
-    bash_completion.install "mp/mp.bash" => "mp"
-    zsh_completion.install "mp/_mp"
-    fish_completion.install "mp/mp.fish"
-    man1.install "mp/mp.1"
-    (etc/"moshpit").install "mp/moshpit.toml.example" if File.exist?("mp/moshpit.toml.example")
+    bin.install "mp"
+    bash_completion.install "mp.bash" => "mp"
+    zsh_completion.install "_mp"
+    fish_completion.install "mp.fish"
+    man1.install "mp.1"
+    (etc/"moshpit").install "moshpit.toml.example" if File.exist?("moshpit.toml.example")
   end
 
   def caveats

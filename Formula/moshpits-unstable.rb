@@ -2,24 +2,24 @@ class MoshpitsUnstable < Formula
   desc "Moshpit server (post-quantum/unstable build) — encrypted remote terminal host"
   homepage "https://github.com/rustyhorde/moshpit"
   license any_of: ["MIT", "Apache-2.0"]
-  version "0.9.0"
+  version "0.9.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.0/mps-unstable-aarch64-apple-darwin.tar.gz"
-      sha256 "922a7d14aa5a9caee4716e32111cec9b28355334741e1c86f99e6919dabc52d3"
+      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.1/mps-unstable-aarch64-apple-darwin.tar.gz"
+      sha256 "b4ac57181029adb6500559b410c3425bd703c5c84f67785499cf42a339f95bc3"
     end
   end
 
   conflicts_with "moshpits", because: "both install the mps binary"
 
   def install
-    bin.install "mps/mps"
-    bash_completion.install "mps/mps.bash" => "mps"
-    zsh_completion.install "mps/_mps"
-    fish_completion.install "mps/mps.fish"
-    man1.install "mps/mps.1"
-    (etc/"moshpits").install "mps/moshpits.toml.example" if File.exist?("mps/moshpits.toml.example")
+    bin.install "mps"
+    bash_completion.install "mps.bash" => "mps"
+    zsh_completion.install "_mps"
+    fish_completion.install "mps.fish"
+    man1.install "mps.1"
+    (etc/"moshpits").install "moshpits.toml.example" if File.exist?("moshpits.toml.example")
   end
 
   def caveats
