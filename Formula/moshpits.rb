@@ -2,12 +2,12 @@ class Moshpits < Formula
   desc "Moshpit server — mosh-like encrypted remote terminal host"
   homepage "https://github.com/rustyhorde/moshpit"
   license any_of: ["MIT", "Apache-2.0"]
-  version "0.9.1"
+  version "0.9.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.1/mps-aarch64-apple-darwin.tar.gz"
-      sha256 "d617d220d89968d542bdabeb053b905e614c999b684967653d51e3c6a2a09d26"
+      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.2/mps-aarch64-apple-darwin.tar.gz"
+      sha256 "e849527f0dcdacef26cae88565db55b3e4868b0c41272ab749d2b57d367bef14"
     end
   end
 
