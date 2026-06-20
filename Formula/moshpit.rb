@@ -2,12 +2,12 @@ class Moshpit < Formula
   desc "Moshpit client — mosh-like encrypted remote terminal"
   homepage "https://github.com/rustyhorde/moshpit"
   license any_of: ["MIT", "Apache-2.0"]
-  version "0.9.2"
+  version "0.9.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.2/mp-aarch64-apple-darwin.tar.gz"
-      sha256 "5e6a6af1d2ee390390986204b18c6c2d71dd271777e4221f513ed96787589f32"
+      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.3/mp-aarch64-apple-darwin.tar.gz"
+      sha256 "a48849d36e38adb79586a042f4bd27da164be08c8500088a65e228bbce376cbb"
     end
   end
 

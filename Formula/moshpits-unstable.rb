@@ -2,12 +2,12 @@ class MoshpitsUnstable < Formula
   desc "Moshpit server (post-quantum/unstable build) — encrypted remote terminal host"
   homepage "https://github.com/rustyhorde/moshpit"
   license any_of: ["MIT", "Apache-2.0"]
-  version "0.9.2"
+  version "0.9.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.2/mps-unstable-aarch64-apple-darwin.tar.gz"
-      sha256 "b375169e0aa19714887437b7c7610e5ee5e48d738bea358add7ab67c54072690"
+      url "https://github.com/rustyhorde/moshpit/releases/download/v0.9.3/mps-unstable-aarch64-apple-darwin.tar.gz"
+      sha256 "24e9810e38bb0e40b0d998696ae5fa0fcab83f94d2ad4560b0758c821a9739a1"
     end
   end
 
